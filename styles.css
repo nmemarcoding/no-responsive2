@@ -1,0 +1,135 @@
+/* Base styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cceae6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero section */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Welcome and Mission */
+.welcome {
+    text-align: center;
+    padding: 20px;
+}
+
+.mission {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.mission .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fefefe;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures content stays inside */
+}
+
+.feature img {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    border-radius: 10px; /* Matches the feature card's rounded corners */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media queries */
+
+/* Small devices (640px or less) */
+@media (max-width: 640px) {
+    .mission, .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle, .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (641px to 1007px) */
+@media (min-width: 641px) and (max-width: 1007px) {
+    .mission, .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .circle, .feature {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Large devices (1008px and up) */
+@media (min-width: 1008px) {
+    .mission, .features {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
